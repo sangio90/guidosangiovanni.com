@@ -1,12 +1,49 @@
-baseURL = "http://guidosangiovanni.com"
-languageCode = "en-us"
-theme="ananke"
+baseurl         = "/"
+theme           = "casper-two"
+languageCode    = "en-US"
+paginate        = 5
 
 [params]
-    background_color_class = "bg-white-10"
-    description = "The last theme you'll ever need. Maybe."
-    featured_image = "/images/header.jpg"
-    recent_posts_number = 5
-    linkedin = "https://www.linkedin.com/in/guido-sangiovanni/"
-    github = "https://github.com/sangio90"
-    custom_css = ["css/custom.css"]
+  title       = "Guido Sangiovanni"
+  subtitle    = "Memorie di un Web Developer"
+
+  cover       = "/images/header.jpg"
+  description = "Un blog tecnico incentrato sul tema dello sviluppo web."
+  metaDescription = ""
+  googleAnalytics = ""
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = "sangio90"
+  #fbName = "Sangio90"
+  githubName = "sangio90"
+  linkedinname = "guido-sangiovanni"
+
+  #logo = "hugo-logo.png"
+  orgName = "GS"
+  orgWebsite = "https://www.guidosangiovanni.com"
+  orgDescription = "A full-stack Web Developer"
+
+  author = "GS"
+  authorAvatar = "/images/profile.jpeg"
+  authorLocation = "Milan, IT"
+  #authorWebsite = "https://sangio.github.io"
+  #authorDescription = "Describe yourself.."
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 100
