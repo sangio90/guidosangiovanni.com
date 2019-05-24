@@ -17,6 +17,6 @@ Nei finesettimana spesso suono la batteria, attualmente in due gruppi:
 
 Attualmente lavoro come Team Leader presso NEALIS, una società di Treviglio (BG) che si occupa di consulenza in ambito software gestionale.
 
-Nel pochissimo tempo residuo mi piace leggere, preferibilmente romanzi fantasy o letteratura classica.
+Nel pochissimo tempo residuo mi piace leggere, preferibilmente romanzi fantasy o giocare con qualche videogioco.
 
 Ho aperto questo blog per condividere il più possibile le quotidiane scoperte che faccio.
