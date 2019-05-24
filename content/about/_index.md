@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "Guido Sangiovanni - About"
 date: 2019-05-23T23:17:45+02:00
 draft: false
 ---
