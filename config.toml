@@ -5,7 +5,7 @@ paginate        = 5
 
 [params]
   title       = "Guido Sangiovanni"
-  subtitle    = "About Web Development"
+  subtitle    = "...sullo sviluppo Web"
 
   cover       = "/images/header.jpg"
   description = "Un blog tecnico incentrato sul tema dello sviluppo web."
