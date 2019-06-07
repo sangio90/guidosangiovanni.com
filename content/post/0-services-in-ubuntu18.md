@@ -2,7 +2,7 @@
 date: 2019-05-23T20:15:11+02:00
 title: "Creare Servizi in Ubuntu 18.04"
 summary: "Creazione di un servizio che si avvia automaticamente in Ubuntu 18.04"
-image: "/images/0.jpg"
+image: "/images/0/header.jpg"
 tags: ["linux", "devops"]
 
 ---
