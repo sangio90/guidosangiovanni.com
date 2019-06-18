@@ -109,10 +109,10 @@ Nel nostro caso utilizziamo proprio **alpine**, quindi specifichiamo tramite CMD
 Una volta salvato il Dockerfile dobbiamo "compilarlo", tramite il comando
 
 ```
-docker build -l ping-test .
+docker build -t ping-test .
 ```
 
--l serve per indicare un nome che vogliamo dare alla nostra immagine, per poterla riconoscere in seguito.
+-t serve per indicare un nome che vogliamo dare alla nostra immagine, per poterla riconoscere in seguito.
 
 Abbiamo definito la nostra prima immagine Docker!
 
