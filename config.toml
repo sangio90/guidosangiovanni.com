@@ -14,7 +14,6 @@ paginate        = 5
   customCSS = []
   RSSLink = ""
 
-  twitterName = "sangio90"
   #fbName = "Sangio90"
   githubName = "sangio90"
   linkedinname = "guido-sangiovanni"
