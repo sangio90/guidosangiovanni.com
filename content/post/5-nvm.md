@@ -44,6 +44,14 @@ In alternativa, se come me disponete di un Mac potete utilizzare il comodissimo 
 
 `brew install nvm` -- scarica ed installa nvm
 
+Al terrmine dell'installazione dovrete modificare il vostro .bashrc o .zshrc (il file di configurazione del terminale che utilizzate) che si trova nella home del vostro utente (/home/guidosangiovanni/.zshrc) aggiungendo un paio di istruzioni:
+
+Questo è un esempio che ha funzionato per me (dovrete adattare la seconda parte se non avete brew).
+
+`export NVM_DIR="$HOME/.nvm"`
+
+`source $(brew --prefix nvm)/nvm.sh`
+
 #### Installiamo Node tramite NVM
 
 Fantastico, il software è già pronto, verifichiamolo tramite il comando:
