@@ -108,7 +108,8 @@
     </div>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-    <script type="javascript">
+    <script type="text/javascript">
+        debugger;
         $(document).ready(function() {
             $('#submit').click(function(event) {
                 event.preventDefault();
@@ -121,10 +122,10 @@
                 $.post({
                     url: '/contact',
                     data: data,
-                    success: (response) {
+                    success: function (response) {
                         console.log('ok')
                     }
-                })
+                });
             });
         });
     </script>
