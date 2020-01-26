@@ -69,26 +69,30 @@
             <h2>
                 Contattami
             </h2>
-            <div class="contact">
-                <div class="row">
-                    <strong style="flex-grow: 2;">Nome</strong style="flex-grow: 2;">
-                    <input style="flex-grow: 5;" type="text" name="nome"/>
+            <form>
+                <div class="contact">
+                    <div class="row">
+                        <strong style="flex-grow: 2;">Nome</strong style="flex-grow: 2;">
+                        <input style="flex-grow: 5;" type="text" name="nome"/>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <strong style="flex-grow: 2;">Email</strong>
+                        <input style="flex-grow: 5;" type="email" name="email"/>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <strong style="flex-grow: 2;">Messaggio</strong>
+                        <textarea style="flex-grow: 5;" name="messaggio"></textarea>
+                    </div>
+                    <br>
+                    <div class="g-recaptcha" data-sitekey="6Le39NIUAAAAAKEvhEn0hGf44mBq_El4q-9xAsqk"></div>
+                    <br/>
+                    <div style="width: 100%; display: flex; justify-content: flex-end;">
+                        <input type="submit" id="submit" value="Scrivimi!">
+                    </div>
                 </div>
-                <br>
-                <div class="row">
-                    <strong style="flex-grow: 2;">Email</strong>
-                    <input style="flex-grow: 5;" type="email" name="email"/>
-                </div>
-                <br>
-                <div class="row">
-                    <strong style="flex-grow: 2;">Messaggio</strong>
-                    <textarea style="flex-grow: 5;" name="messaggio"></textarea>
-                </div>
-                <br>
-                <div style="width: 100%; display: flex; justify-content: flex-end;">
-                    <div id="submit">Scrivimi!</div>
-                </div>
-            </div>
+            </form>
             <br><br>
         </div>
     </div>
@@ -259,16 +263,5 @@
         100% { opacity: 1;}
     }
 </style>
-<script src="https://www.google.com/recaptcha/api.js?render=6LcE9NIUAAAAAGsb867takuuyh3LDWHN3NoSOxJq"></script>
-<script>
-grecaptcha.ready(function() {
-    document.addEventListener('click', function (event) {
-        if (!event.target.matches('#submit')) return;
-        event.preventDefault();
-        grecaptcha.execute('6LcE9NIUAAAAAGsb867takuuyh3LDWHN3NoSOxJq', {action: 'homepage'}).then(function(token) {
-            debugger;
-        });
-        }, false);
-});
-</script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>
