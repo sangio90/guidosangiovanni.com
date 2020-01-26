@@ -5,8 +5,13 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Guido Sangiovanni</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+          grecaptcha.render('recaptcha', {
+            'sitekey' : '6Le39NIUAAAAAKEvhEn0hGf44mBq_El4q-9xAsqk'
+          });
+        };
+      </script>
 </head>
 <body>
     <div class="header"></div>
@@ -86,7 +91,7 @@
                         <textarea style="flex-grow: 5;" name="messaggio"></textarea>
                     </div>
                     <br>
-                    <div class="g-recaptcha" data-sitekey="6Le39NIUAAAAAKEvhEn0hGf44mBq_El4q-9xAsqk"></div>
+                    <div id="recaptcha"></div>
                     <br/>
                     <div style="width: 100%; display: flex; justify-content: flex-end;">
                         <input type="submit" id="submit" value="Scrivimi!">
@@ -99,6 +104,7 @@
     <div class="footer">
         Guido Sangiovanni - P.IVA 01718390196
     </div>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 </body>
 <style>
 
@@ -263,5 +269,4 @@
         100% { opacity: 1;}
     }
 </style>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>
