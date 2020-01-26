@@ -74,7 +74,7 @@
             <h2>
                 Contattami
             </h2>
-            <form>
+            <form action="/contact" method="post" enctype="text/plain">
                 <div class="contact">
                     <div class="row">
                         <strong style="flex-grow: 2;">Nome</strong style="flex-grow: 2;">
@@ -91,7 +91,9 @@
                         <textarea style="flex-grow: 5;" name="messaggio"></textarea>
                     </div>
                     <br>
-                    <div id="recaptcha"></div>
+                    <div class="row" style="justify-content: flex-end;">
+                        <div class="recaptcha"></div>
+                    </div>
                     <br/>
                     <div style="width: 100%; display: flex; justify-content: flex-end;">
                         <input type="submit" id="submit" value="Scrivimi!">
