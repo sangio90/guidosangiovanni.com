@@ -74,7 +74,7 @@
             <h2>
                 Contattami
             </h2>
-            <form action="/contact" method="post" enctype="text/plain">
+            <form method="post" enctype="text/plain">
                 <div class="contact">
                     <div class="row">
                         <strong style="flex-grow: 2;">Nome</strong style="flex-grow: 2;">
@@ -107,6 +107,25 @@
         Guido Sangiovanni - P.IVA 01718390196
     </div>
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script type="javascript">
+        $('#submit').click(function(event) {
+            event.preventDefault();
+            const data = {
+                nome: $('[name="nome"]').val(),
+                email: $('[name="email"]').val(),
+                messaggio: $('[name="messaggio"]').val(),
+                grecaptcha: grecaptcha.getResponse()
+            }
+            $.post({
+                url: '/contact',
+                data: data,
+                success: (response) {
+                    console.log('ok')
+                }
+            })
+        })
+    </script>
 </body>
 <style>
 
