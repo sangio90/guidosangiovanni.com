@@ -234,11 +234,16 @@
 
     #successDiv {
         position: absolute;
+        text-align: center;
+        padding: 5pt;
         top: 10pt;
         right: 10pt;
-        width: 200px;
-        height: 90px;
+        width: 400px;
+        height: 35px;
         background-color: #bbffbb;
+        color: black;
+        opacity: 0.8;
+        border-radius: 0.2em;
         visibility: hidden;
     }
 
@@ -285,12 +290,11 @@
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
     function showSuccessDiv() {
-        $('#successDiv').show();
+        $('#successDiv').css('visibility', 'visible');
     }
     function hideSuccessDiv() {
-        $('#successDiv').hide();
+        $('#successDiv').css('visibility', 'hidden');
     }
-
     $(document).ready(function() {
         $('#contactForm').on('submit', function(e) {
             e.preventDefault();
