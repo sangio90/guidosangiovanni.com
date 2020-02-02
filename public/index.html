@@ -68,28 +68,30 @@
         Contattami
     </h2>
     <div class="contact">
-        <div class="row">
-            <strong style="flex-grow: 2;">Nome</strong style="flex-grow: 2;">
-            <input style="flex-grow: 5;" type="text" name="nome" value="guido"/>
-        </div>
-        <br>
-        <div class="row">
-            <strong style="flex-grow: 2;">Email</strong>
-            <input style="flex-grow: 5;" type="email" name="email" value="sangiovanni.guido@gmail.com" />
-        </div>
-        <br>
-        <div class="row">
-            <strong style="flex-grow: 2;">Messaggio</strong>
-            <textarea style="flex-grow: 5;" name="messaggio">msg</textarea>
-        </div>
-        <br>
-        <div style="width: 100%; display: flex; justify-content: flex-end;">
-            <div class="g-recaptcha" data-sitekey="6Le39NIUAAAAAKEvhEn0hGf44mBq_El4q-9xAsqk"></div>
-        </div>
-        <br>
-        <div style="width: 100%; display: flex; justify-content: flex-end;">
-            <div id="submit">Scrivimi!</div>
-        </div>
+        <form id="contactForm">
+            <div class="row">
+                <strong style="flex-grow: 2;">Nome</strong style="flex-grow: 2;">
+                <input style="flex-grow: 5;" type="text" name="nome" value="guido"/>
+            </div>
+            <br>
+            <div class="row">
+                <strong style="flex-grow: 2;">Email</strong>
+                <input style="flex-grow: 5;" type="email" name="email" value="sangiovanni.guido@gmail.com" />
+            </div>
+            <br>
+            <div class="row">
+                <strong style="flex-grow: 2;">Messaggio</strong>
+                <textarea style="flex-grow: 5;" name="messaggio">msg</textarea>
+            </div>
+            <br>
+            <div style="width: 100%; display: flex; justify-content: flex-end;">
+                <div class="g-recaptcha" data-sitekey="6Le39NIUAAAAAKEvhEn0hGf44mBq_El4q-9xAsqk"></div>
+            </div>
+            <br>
+            <div style="width: 100%; display: flex; justify-content: flex-end;">
+                <button type="submit">Scrivimi!</button>
+            </div>
+        </form>
     </div>
     <br><br>
 </div>
@@ -268,8 +270,7 @@
         crossorigin="anonymous"></script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#submit').click(function(e) {
-            debugger;
+        $('#contactForm').on('submit', function(e) {
             var nome = $('[name="nome"]').val();
             var email = $('[name="email"]').val();
             var messaggio = $('[name="messaggio"]').val();
@@ -282,7 +283,7 @@
                     email: email,
                     nome: nome,
                     messaggio: messaggio,
-                    'g-recaptcha-response': grecaptcha.getResponse()
+                    captcha: grecaptcha.getResponse()
 
                 },
                 success: function(response) {
