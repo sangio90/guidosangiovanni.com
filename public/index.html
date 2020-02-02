@@ -271,6 +271,7 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
             var nome = $('[name="nome"]').val();
             var email = $('[name="email"]').val();
             var messaggio = $('[name="messaggio"]').val();
