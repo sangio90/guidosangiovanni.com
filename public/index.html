@@ -89,7 +89,7 @@
             </div>
             <br>
             <div style="width: 100%; display: flex; justify-content: flex-end;">
-                <button type="submit">Scrivimi!</button>
+                <button id="submit" type="submit">Scrivimi!</button>
             </div>
         </form>
     </div>
@@ -277,8 +277,6 @@
 
             $.post({
                 url: 'https://php-guidosangiovanni-mailer.herokuapp.com/',
-                contentType: 'application/json',
-                dataType: 'json',
                 data: {
                     email: email,
                     nome: nome,
