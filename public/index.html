@@ -7,10 +7,13 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
-<div class="header"></div>
+<div class="header">
+    <div id="logo">
+    </div>
+</div>
 <br>
 <div class="container">
-    <div>
+    <div class="text-left">
         <div>
             <h2>
                 CIAO!
@@ -19,7 +22,7 @@
         </div>
     </div>
     <br>
-    <div>
+    <div class="text-right">
         <div>
             <h2>
                 Di cosa mi occupo?
@@ -55,20 +58,20 @@
                 In cosa credo?
             </h2>
             <strong>Lavorare bene</strong><br>
-            <div style="display: flex; justify-content: flex-start;">
-                <div style="text-align: left; width: 75%;">
+            <div class="text-left">
+                <div>
                     Un Software su misura sulle tue esigenze ti permette di essere più produttivo, di risparmiare e di guadagnare di più, ma soprattutto di dare più valore al tuo tempo.<br><br>
                 </div>
             </div>
             <strong>Formazione</strong><br>
-            <div style="display: flex; justify-content: flex-end;">
-                <div style="text-align: right; width: 75%;">
+            <div class="text-right">
+                <div>
                     Ogni progetto ha delle esigenze specifiche, per questo motivo dedico una parte importante del mio tempo a tenermi aggiornato sugli strumenti e le tecnologie migliori.<br><br>
                 </div>
             </div>
             <strong>Condivisione</strong><br>
-            <div style="display: flex; justify-content: flex-start;">
-                <div style="text-align: left; width: 75%;">
+            <div class="text-left">
+                <div>
                     Sono fortemente convinto che condividere la propria conoscenza ed esperienza sia la strada per ottenere un mondo migliore, per tutti. Per questo motivo, insieme ad alcuni ex colleghi ed amici ho contribuito a fondare la Community si Sviluppatori "CremaWeb".<br><br>
                 </div>
             </div>
@@ -134,7 +137,7 @@
     body {
         background-color: #323232;
         color: white;
-        font-size: 23pt;
+        font-size: 1.8em;
     }
 
     hr {
@@ -185,6 +188,24 @@
         animation: slidefromleft 1.5s forwards;
         animation-delay: 0.1s;
     }
+
+    .text-left {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .text-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .text-left div {
+        text-align: left;
+        width: 75%;
+    }
+    .text-right div {
+        text-align: right;
+        width: 75%;
+    }
+
     .popup {
         opacity: 0;
     }
@@ -196,21 +217,29 @@
     }
 
     .header {
-        width: 100vw;
-        height: 60vh;
-        min-height: 714px;
-        background: url('./images/biglietto da visita front.png') no-repeat center;
-        transition: transform .5s, opacity .5s, z-index .5s;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
-    @media screen and (max-width: 1200px) {
-        .header {
-            height: 414px;
-            background: url('./images/biglietto da visita front.png') no-repeat center;
+
+    @media screen and (max-width: 800px) {
+        img {
+            width: 100%;
+        }
+        body {
+            font-size: 1.4em;
+        }
+        .text-right div {
+            width: 100%;
+        }
+        .text-left div {
+            width: 100%;
         }
     }
+
     .container {
-        margin-left: 5vw;
-        margin-right: 5vw;
+        margin-left: 120pt;
+        margin-right: 120pt;
     }
 
     .footer {
@@ -258,6 +287,17 @@
         opacity: 0.8;
         border-radius: 0.2em;
         visibility: hidden;
+    }
+
+    #logo {
+        background: url('./images/fronte.png');
+        width: 1050px;
+        height: 600px;
+        transition: 0.8s;
+    }
+    #logo:hover {
+        background: url('./images/retro.png');
+        transition: 0.8s;
     }
 
     /* ANIMATIONS */
