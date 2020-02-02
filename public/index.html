@@ -19,7 +19,7 @@
                 CIAO!
             </h2>
         </div>
-        <div class="text-left">sono Guido Sangiovanni, uno sviluppatore Web.</div>
+        <div class="text-center">sono Guido Sangiovanni, uno sviluppatore Web.</div>
         <br>
         <div class="text-right">
             <h2>
@@ -245,7 +245,6 @@
     }
 
     .header {
-        width: calc(100% - 20pt);
         display: flex;
         justify-content: center;
     }
@@ -266,11 +265,11 @@
         text-align: center;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1400px) {
         #logo {
             width: calc(100% - 20pt);
-            height: 250px;
-            background-size: cover;
+            max-height: 250px;
+            background-size: 100%;
         }
 
         body {
