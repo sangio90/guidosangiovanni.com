@@ -314,11 +314,6 @@
         text-align: center;
     }
 
-    #map {
-        height: 480px;
-        width: 640px;
-    }
-
     @media screen and (max-width: 1800px) {
         .container {
             margin-left: 40pt;
@@ -392,10 +387,6 @@
             font-size: 40px;
         }
 
-        #map {
-            height: 450px;
-            width: 600px;
-        }
     }
 
     @-webkit-keyframes spin {
@@ -410,18 +401,7 @@
 </style>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 <script type="text/javascript">
-
-    function initMap() {
-        // The location of Uluru
-        var uluru = {lat: -25.344, lng: 131.036};
-        // The map, centered at Uluru
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 4, center: uluru});
-        // The marker, positioned at Uluru
-        var marker = new google.maps.Marker({position: uluru, map: map});
-    }
 
     function showSuccessDiv() {
         $('#successDiv').css('visibility', 'visible');
