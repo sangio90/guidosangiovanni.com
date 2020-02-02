@@ -282,7 +282,7 @@
                     email: email,
                     nome: nome,
                     messaggio: messaggio,
-                    'g-recaptcha-response': $('[name="g-recaptcha-response"]').val()
+                    'g-recaptcha-response': grecaptcha.getResponse()
 
                 },
                 success: function(response) {
