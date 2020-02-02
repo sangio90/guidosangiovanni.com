@@ -265,11 +265,29 @@
         text-align: center;
     }
 
-    @media screen and (max-width: 1400px) {
+    @media screen and (max-width: 1800px) {
+        .container {
+            margin-left: 40pt;
+            margin-right: 40pt;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
         #logo {
-            width: calc(100% - 20pt);
-            max-height: 250px;
-            background-size: 100%;
+            background: url('./images/fronte-small.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 420px;
+        }
+        #logo:hover {
+            background: url('./images/retro-small.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 420px;
+        }
+
+        .header {
+            height: 420px;
         }
 
         body {
