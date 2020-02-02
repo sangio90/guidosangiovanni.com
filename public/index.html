@@ -96,6 +96,9 @@
     <br><br>
 </div>
 </div>
+<div id="successDiv">
+    Mail inviata con successo. Grazie
+</div>
 <div class="footer">
     Guido Sangiovanni - P.IVA 01718390196
 </div>
@@ -227,6 +230,16 @@
         border: 0;
     }
 
+    #successDiv {
+        position: absolute;
+        top: 10pt;
+        right: 10pt;
+        width: 200px;
+        height: 90px;
+        background-color: #bbffbb;
+        display: none;
+    }
+
     /* ANIMATIONS */
 
     @-webkit-keyframes slidefromright {
@@ -269,6 +282,13 @@
         crossorigin="anonymous"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
+    function showSuccessDiv() {
+        $('#successDiv').show();
+    }
+    function hideSuccessDiv() {
+        $('#successDiv').hide();
+    }
+
     $(document).ready(function() {
         $('#contactForm').on('submit', function(e) {
             e.preventDefault();
@@ -286,7 +306,11 @@
 
                 },
                 success: function(response) {
-                    debugger;
+                    $('[name="nome"]').val('');
+                    $('[name="email"]').val('');
+                    $('[name="messaggio"]').val('');
+                    showSuccessDiv();
+                    setTimeout(hideSuccessDiv, 5000);
                 }
             })
         });
