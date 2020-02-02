@@ -74,51 +74,52 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="container">
+        <div class="text-center">
+            <h3>
+                Contattami
+            </h3>
+        </div>
+        <div class="text-center">
+            Se vuoi contattarmi, vuoi approfondire i temi di cui mi occupo o ti serve un preventivo, scrivimi pure nella form che trovi qua sotto.<br>
+            Ti risponderò al più presto!<br><br>
+        </div>
+        <div class="contact">
+            <form id="contactForm">
+                <strong>Nome</strong>
+                <br>
+                <br>
+                <div class="formComponent">
+                    <input type="text" name="nome" value=""/>
+                </div>
+                <br>
+                <strong>Email</strong>
+                <br>
+                <br>
+                <div class="formComponent">
+                    <input type="email" name="email" value=""/>
+                </div>
+                <br>
+                <strong>Messaggio</strong>
+                <br>
+                <br>
+                <div class="formComponent">
+                    <textarea name="messaggio" rows="4"></textarea>
+                </div>
+                <br>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <div class="g-recaptcha" data-sitekey="6Lfu_dQUAAAAAJySlroCH3bSVBRnBAB-Wj7budSy"></div>
+                </div>
+                <br>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <button id="submit" type="submit">Scrivimi!</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
-<div class="container">
-    <div class="text-center">
-        <h3>
-            Contattami
-        </h3>
-    </div>
-    <div class="text-center">
-        Se vuoi contattarmi, vuoi approfondire i temi di cui mi occupo o ti serve un preventivo, scrivimi pure nella form che trovi qua sotto.<br>
-        Ti risponderò al più presto!<br><br>
-    </div>
-    <div class="contact">
-        <form id="contactForm">
-            <strong>Nome</strong>
-            <br>
-            <br>
-            <div class="formComponent">
-                <input type="text" name="nome" value=""/>
-            </div>
-            <br>
-            <strong>Email</strong>
-            <br>
-            <br>
-            <div class="formComponent">
-                <input type="email" name="email" value=""/>
-            </div>
-            <br>
-            <strong>Messaggio</strong>
-            <br>
-            <br>
-            <div class="formComponent">
-                <textarea name="messaggio" rows="4"></textarea>
-            </div>
-            <br>
-            <div style="width: 100%; display: flex; justify-content: center;">
-                <div class="g-recaptcha" data-sitekey="6Lfu_dQUAAAAAJySlroCH3bSVBRnBAB-Wj7budSy"></div>
-            </div>
-            <br>
-            <div style="width: 100%; display: flex; justify-content: center;">
-                <button id="submit" type="submit">Scrivimi!</button>
-            </div>
-        </form>
-    </div>
-    <br><br>
-</div>
+
 <div id="successDiv">
     Mail inviata con successo. Grazie
 </div>
@@ -230,11 +231,11 @@
     }
 
     .formComponent input {
-        width: 20%;
+        width: 60%;
     }
 
     .formComponent textarea {
-        width: 40%;
+        width: 60%;
     }
 
     .topbar {
@@ -313,6 +314,11 @@
         text-align: center;
     }
 
+    #map {
+        height: 480px;
+        width: 640px;
+    }
+
     @media screen and (max-width: 1800px) {
         .container {
             margin-left: 40pt;
@@ -385,6 +391,11 @@
         .topbar {
             font-size: 40px;
         }
+
+        #map {
+            height: 450px;
+            width: 600px;
+        }
     }
 
     @-webkit-keyframes spin {
@@ -399,7 +410,19 @@
 </style>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 <script type="text/javascript">
+
+    function initMap() {
+        // The location of Uluru
+        var uluru = {lat: -25.344, lng: 131.036};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 4, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+
     function showSuccessDiv() {
         $('#successDiv').css('visibility', 'visible');
     }
