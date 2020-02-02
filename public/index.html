@@ -21,7 +21,7 @@
             <div class="text-center">Sono Guido Sangiovanni, uno sviluppatore Web Freelance residente a Crema (CR).
                 <br>
                 <br>
-                <img src="./images/profile.jpeg" style="max-width:290px; border: 1px solid #999999; border-radius: 2em; filter: drop-shadow(0 0 0.6rem white);">
+                <img src="./images/profile.jpeg" class="profile">
                 <br>
                 <br>
                 Lavoro da 10 anni nel mondo delle applicazioni Web, principalmente in ambito gestionale.<br><br>
@@ -258,13 +258,16 @@
         text-align: center;
     }
 
-    .header {
-        display: flex;
-        justify-content: center;
-    }
-
     .subtitle {
         color: #94D1EB;
+    }
+
+    .profile {
+        max-width:300px;
+        border: 1px solid #999999;
+        border-radius: 2em;
+        filter: drop-shadow(0 0 0.6rem white);
+        opacity: 0.7;
     }
 
     #submit {
@@ -308,18 +311,6 @@
         visibility: hidden;
     }
 
-    #logo {
-        background: url('./images/fronte.png');
-        width: 1050px;
-        height: 600px;
-        transition: 0.8s;
-    }
-
-    #logo:hover, #logo:active {
-        background: url('./images/retro.png');
-        transition: 0.8s;
-    }
-
     #contactForm {
         text-align: center;
     }
@@ -332,23 +323,6 @@
     }
 
     @media screen and (max-width: 1200px) {
-        #logo {
-            background: url('./images/fronte-medium.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 420px;
-        }
-        #logo:hover, #logo:active {
-            background: url('./images/retro-medium.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 420px;
-        }
-
-        .header {
-            height: 420px;
-        }
-
         body {
             font-size: 1.4em;
         }
@@ -376,25 +350,12 @@
     }
 
     @media screen and (max-width: 640px) {
-        #logo {
-            background: url('./images/fronte-small.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 214px;
-        }
-        #logo:hover, #logo:active {
-            background: url('./images/retro-small.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 214px;
-        }
-
-        .header {
-            height: 214px;
-        }
-
         .topbar {
             font-size: 40px;
+        }
+
+        .profile {
+            max-width: 220px;
         }
 
         #submit {
