@@ -10,8 +10,8 @@
 <div class="header"></div>
 <br>
 <div class="container">
-    <div class="slide-from-right-container">
-        <div class="slide-from-right">
+    <div>
+        <div>
             <h2>
                 CIAO!
             </h2>
@@ -19,47 +19,59 @@
         </div>
     </div>
     <br>
-    <div class="slide-from-left-container">
-        <div class="slide-from-left">
+    <div>
+        <div>
             <h2>
                 Di cosa mi occupo?
             </h2>
             lavoro da 10 anni nel mondo delle applicazioni Web, principalmente in ambito gestionale.<br>
-            Durante la mia esperienza come sviluppatore, Team Leader e Project Manager ho collaborato e gestito lo sviluppo di applicazioni Web per aziende in diversi contesti e di diverse dimensioni, dalla PMI industriale alla multinazionale della moda.
+            Durante la mia esperienza come sviluppatore, Team Leader e Project Manager ho collaborato e gestito lo sviluppo di applicazioni Web per aziende in diversi contesti e di diverse dimensioni, dalle PMI industriali e commerciali alle multinazionali.
         </div>
     </div>
-    <hr>
     <br>
-    <div class="popup-container">
-        <div class="popup">
-            <h2>
-                Come lavoro?
-            </h2>
-            Il mio lavoro solitamente si svolge in cicli di tre fasi:<br>
-            <br>
-            <div style="text-align: left;">
-                <strong>Analisi</strong><br>
-                Durante questa fase mi reco presso il cliente e, parlando con gli addetti ed analizzando documenti o software esistenti, redigo un documento nel quale indico quale lavoro dovrà essere svolto, allegando una stima di costo per il cliente.<br><br>
-                <strong>Sviluppo</strong><br>
-                Questa è la fase in cui mi occupo di preparare il vostro Software, utilizzando le tecnologie più adatte a soddisfare le reali esigente.<br><br>
-                <strong>Test e Rilascio</strong><br>
-                L'ultima e forse la più importante fase è quella del Testing, un'operazione che richiede uno sforzo congiunto da parte mia e del cliente, in questo modo verifichiamo che il lavoro sia corretto e completo.<br><br>
-            </div>
-        </div>
-    </div>
+<!--    <hr>-->
+<!--    <br>-->
+<!--    <div class="popup-container">-->
+<!--        <div class="popup">-->
+<!--            <h2>-->
+<!--                Come lavoro?-->
+<!--            </h2>-->
+<!--            Il mio lavoro solitamente si svolge in tre fasi:<br>-->
+<!--            <br>-->
+<!--            <div style="text-align: left;">-->
+<!--                <strong>Analisi</strong><br>-->
+<!--                Durante questa fase mi reco presso il cliente e, parlando con gli addetti ed analizzando documenti o software esistenti, redigo un documento nel quale indico quale lavoro dovrà essere svolto, allegando una stima di costo per il cliente.<br><br>-->
+<!--                <strong>Sviluppo</strong><br>-->
+<!--                Questa è la fase in cui mi occupo di preparare il vostro Software, utilizzando le tecnologie più adatte a soddisfare le reali esigente.<br><br>-->
+<!--                <strong>Test e Rilascio</strong><br>-->
+<!--                L'ultima e forse la più importante fase è quella del Testing, un'operazione che richiede uno sforzo congiunto da parte mia e del cliente, in questo modo verifichiamo che il lavoro sia corretto e completo.<br><br>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
     <hr>
-    <br>
     <div class="popup-container">
         <div class="popup">
             <h2>
                 In cosa credo?
             </h2>
             <strong>Lavorare bene</strong><br>
-            Un Software su misura sulle tue esigenze ti permette di essere più produttivo, di risparmiare e di guadagnare di più, ma soprattutto di dare più valore al tuo tempo.<br><br>
+            <div style="display: flex; justify-content: flex-start;">
+                <div style="text-align: left; width: 75%;">
+                    Un Software su misura sulle tue esigenze ti permette di essere più produttivo, di risparmiare e di guadagnare di più, ma soprattutto di dare più valore al tuo tempo.<br><br>
+                </div>
+            </div>
             <strong>Formazione</strong><br>
-            Ogni progetto ha delle esigenze specifiche, per questo motivo dedico una parte importante del mio tempo a tenermi aggiornato sugli strumenti e le tecnologie migliori.<br><br>
+            <div style="display: flex; justify-content: flex-end;">
+                <div style="text-align: right; width: 75%;">
+                    Ogni progetto ha delle esigenze specifiche, per questo motivo dedico una parte importante del mio tempo a tenermi aggiornato sugli strumenti e le tecnologie migliori.<br><br>
+                </div>
+            </div>
             <strong>Condivisione</strong><br>
-            Sono fortemente convinto che condividere la propria conoscenza ed esperienza sia la strada per ottenere un mondo migliore, per tutti. Per questo motivo, insieme ad alcuni ex colleghi ed amici ho contribuito a fondare la Community si Sviluppatori "CremaWeb".<br><br>
+            <div style="display: flex; justify-content: flex-start;">
+                <div style="text-align: left; width: 75%;">
+                    Sono fortemente convinto che condividere la propria conoscenza ed esperienza sia la strada per ottenere un mondo migliore, per tutti. Per questo motivo, insieme ad alcuni ex colleghi ed amici ho contribuito a fondare la Community si Sviluppatori "CremaWeb".<br><br>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -178,8 +190,8 @@
     }
 
     .popup {
-        animation: popup 3s forwards;
-        animation-delay: 1.2s;
+        animation: popup 2s forwards;
+        animation-delay: 0.5s;
         text-align: center;
     }
 
@@ -202,12 +214,13 @@
     }
 
     .footer {
+        display: flex;
+        justify-content: center;
         background-color: #323232;
         position: fixed;
         bottom: 0;
         width: 100vw;
         height: 25pt;
-        text-align: center;
         font-size: 15pt;
     }
 
