@@ -12,7 +12,7 @@
     </div>
 </div>
 <br>
-<div class="container">
+<div class="container page">
     <div class="container">
         <div class="text-center">
             <h2>
@@ -125,6 +125,7 @@
 <div class="footer">
     Guido Sangiovanni - P.IVA 01718390196
 </div>
+<div id="loader"></div>
 </body>
 <style>
 
@@ -229,6 +230,12 @@
         width: 40%;
     }
 
+
+    .header {
+        display: flex;
+        justify-content: center;
+    }
+
     #submit {
         padding: 6pt;
         line-height: 24pt;
@@ -253,9 +260,19 @@
         visibility: hidden;
     }
 
-    .header {
-        display: flex;
-        justify-content: center;
+
+    #loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #94D1EB;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+        position: fixed;
+        top: calc(50% - 60px);
+        left: calc(50% - 60px);
+        visibility: hidden;
     }
 
     #logo {
@@ -343,10 +360,18 @@
             height: 214px;
         }
     }
+
+    @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
 </style>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript">
     function showSuccessDiv() {
@@ -357,8 +382,18 @@
         $('#successDiv').css('visibility', 'hidden');
     }
 
+    function showLoader() {
+        $('#loader').css('visibility', 'visible');
+    }
+
+    function hideLoader() {
+        $('#loader').css('visibility', 'hidden');
+    }
+
     $(document).ready(function () {
         $('#contactForm').on('submit', function (e) {
+            showLoader();
+            $('.container').css('filter', 'blur(3px)')
             e.preventDefault();
             var nome = $('[name="nome"]').val();
             var email = $('[name="email"]').val();
@@ -374,6 +409,8 @@
 
                 },
                 success: function (response) {
+                    hideLoader();
+                    $('.container').css('filter', '')
                     $('[name="nome"]').val('');
                     $('[name="email"]').val('');
                     $('[name="messaggio"]').val('');
