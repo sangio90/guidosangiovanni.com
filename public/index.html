@@ -439,7 +439,7 @@
                     $('[name="nome"]').val('');
                     $('[name="email"]').val('');
                     $('[name="messaggio"]').val('');
-                    if (response.success) {
+                    if (JSON.parse(response).success) {
                         showSuccessDiv();
                         setTimeout(hideSuccessDiv, 2500);
                     }
