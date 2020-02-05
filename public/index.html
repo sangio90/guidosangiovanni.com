@@ -37,18 +37,18 @@
         <br>
     </div>
     <hr>
-    <div class="container">
-        <h3 class="always-center">
-            In cosa credo?
-        </h3>
-        <div class="text-left">
+    <h2 class="always-center">
+        In cosa credo?
+    </h2>
+    <div class="boxes">
+        <div class="box">
             <h3 class="subtitle">Lavorare bene</h3>
             <div>
                 Il Software, come ogni prodotto, deve essere progettato e costruito bene facendo attenzione ad ogni dettaglio.<br>
                 Solo in questo modo sarà davvero uno strumento utile, <span class="keyword">non più un costo</span>, e potrai finalmente concentrarti su ciò che ti interessa veramente dando così maggior valore al tuo tempo.
             </div>
         </div>
-        <div class="text-right">
+        <div class="box">
             <h3 class="subtitle">Formazione</h3>
             <div>
                 Per poter fornire il miglior Software possibile mi tengo <span class="keyword">sempre aggiornato</span> sulle nuove tecnologie e linguaggi frequentando Meetup e User Group.
@@ -56,7 +56,7 @@
                 Inoltre, grazie alla mia esperienza di <span class="keyword">lavoro in Team</span>, presto sempre particolare attenzione alla qualità del codice, alla mantenibilità e alle prestazioni del Software.
             </div>
         </div>
-        <div class="text-left">
+        <div class="box">
             <h3 class="subtitle">Condivisione</h3>
             <div>
                 Credo fortemente che condividere la propria conoscenza ed esperienza sia la strada per
@@ -66,22 +66,22 @@
         </div>
     </div>
     <hr>
-    <div class="container">
-        <div class="text-center">
-            <h3 class="always-center">
-                Dove sono?
-            </h3>
-            Abito e lavoro a Bagnolo Cremasco (CR).<br><br>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.4065503180996!2d9.614184515980336!3d45.360790579100005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781310b45d7292d%3A0x4d0f7548eca20653!2sGuido%20Sangiovanni!5e0!3m2!1sen!2sit!4v1580824807267!5m2!1sen!2sit" width="100%" height="320" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </div>
+    <div class="text-center">
+        <h2 class="always-center">
+            Dove sono?
+        </h2>
+        <div class="always-center">
+            Abito e lavoro a Bagnolo Cremasco (CR).
+        </div><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.4065503180996!2d9.614184515980336!3d45.360790579100005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781310b45d7292d%3A0x4d0f7548eca20653!2sGuido%20Sangiovanni!5e0!3m2!1sen!2sit!4v1580824807267!5m2!1sen!2sit" width="100%" height="320" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
     <br>
     <hr>
     <div class="container">
-        <h3 class="always-center">
+        <h2 class="always-center">
             Contattami
-        </h3>
-        <div class="text-center">
+        </h2>
+        <div class="always-center">
             Se vuoi <span class="keyword">approfondire</span> i temi di cui mi occupo o ti serve un <span class="keyword">preventivo</span>, scrivimi tramite il form qui sotto.<br><br>
         </div>
         <div class="contact">
@@ -180,24 +180,27 @@
         color: white;
     }
 
-    .text-left {
-        text-align: left;
+    .boxes {
+        display: flex;
+        justify-content: space-evenly;
     }
 
-    .text-right {
-        text-align: right;
+    .box {
+        flex: 1;
+        padding: 0 1.8vw 1.8vw 1.8vw;
+        background-color: #454545;
+        color: white;
+        margin: 0 1.2vw 2vw 1.2vw;
+        filter: drop-shadow(5px 5px 0.3rem #565656);
+        border-radius: 0.2em;
+    }
+
+    .box h2 {
+        margin: auto;
     }
 
     .text-center {
         text-align: center;
-    }
-
-    .text-left div {
-        text-align: left;
-    }
-
-    .text-right div {
-        text-align: right;
     }
 
     .always-center {
@@ -264,6 +267,7 @@
     .subtitle {
         color: #94D1EB;
         font-weight: 100;
+        text-align: center;
     }
 
     .keyword {
@@ -339,14 +343,6 @@
             font-size: 1.4em;
         }
 
-        .text-right div {
-            width: 100%;
-        }
-
-        .text-left div {
-            width: 100%;
-        }
-
         .container {
             margin-left: 2vw;
             margin-right: 2vw;
@@ -361,7 +357,7 @@
         }
     }
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 900px) {
         .topbar {
             font-size: 40px;
         }
@@ -370,29 +366,22 @@
             max-width: 220px;
         }
 
-        .text-right {
-            text-align: center;
-        }
-
-        .text-left {
-            text-align: center;
-        }
-
-        .text-right div {
-            text-align: left;
-        }
-
-        .text-left div {
-            text-align: left;
-
-        }
-
         .text-center {
             text-align: left;
         }
 
         #submit {
             width: 80%;
+        }
+
+        .boxes {
+            flex-direction: column;
+        }
+
+        .box {
+            filter: none;
+            margin-bottom: 18pt;
+            padding: 18pt;
         }
 
     }
